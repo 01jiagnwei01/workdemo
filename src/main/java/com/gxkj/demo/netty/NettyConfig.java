@@ -5,4 +5,6 @@ public class NettyConfig {
 	public static final int port = 8989;
 	
 	public static final String host = "localhost";
+	
+	public static final int proxyPort = 8787;
 }
