@@ -10,9 +10,6 @@ public class ServerMain {
 		 
 		 ApplicationContext context = new ClassPathXmlApplicationContext(  new String[] { "netty_spring/applicationContext.xml" });
 		  IServer server = ((IServer)context.getBean("server"));
-		  server.start();
-		  
-		  //Thread.sleep(3);
-		  server.stop();
+		  server.start();  
 		}
 }
