@@ -45,13 +45,8 @@ public class Server implements IServer {
              .channel(NioServerSocketChannel.class)
              .option(ChannelOption.SO_BACKLOG, 100)
              .handler(new LoggingHandler(LogLevel.INFO))
-             .childHandler(new ChannelInitializer<SocketChannel>() {
-                 public void initChannel(SocketChannel ch) throws Exception {
-                     ch.pipeline().addLast(
-                             new LoggingHandler(LogLevel.INFO),
-                             new EchoServerHandler());
-                 }
-             });
+             .childHandler(new MySocksServerInitializer());
+ 
 
             // Start the server.
             channelFuture = serverBootstrap.bind(config.getPort()).sync();

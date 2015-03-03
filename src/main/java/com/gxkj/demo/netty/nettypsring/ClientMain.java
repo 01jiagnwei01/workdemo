@@ -10,11 +10,9 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.gxkj.demo.netty.NettyConfig;
 import com.gxkj.demo.netty.telnet.TelnetClientInitializer;
 
 public class ClientMain {
